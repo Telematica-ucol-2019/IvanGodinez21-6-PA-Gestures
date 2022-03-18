@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Gestures.ImagePage">
+             x:Class="Gestures.ImageTripleTapPage">
     <ContentPage.Content>
         <Grid VerticalOptions="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="300" />
             </Grid.RowDefinitions>
             <Image x:Name="mainImage" Grid.Column="0" Grid.Row="0">
                 <Image.GestureRecognizers>
-                    <PinchGestureRecognizer PinchUpdated="OnPageInvertedPinch" />
+                    <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="OnTripleTap"/>
+                    <PinchGestureRecognizer PinchUpdated="OnPagePinch"/>
                 </Image.GestureRecognizers>
             </Image>
         </Grid>

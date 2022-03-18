@@ -7,14 +7,13 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="300" />
             </Grid.RowDefinitions>
             <Image x:Name="mainImage" Grid.Column="0" Grid.Row="0">
                 <Image.GestureRecognizers>
-                    <SwipeGestureRecognizer
-                        Swiped="OnPageSwipe" Direction="Down"/>
+                    <SwipeGestureRecognizer Swiped="OnPageSwipe" Direction="Down"/>
+                    <PinchGestureRecognizer PinchUpdated="OnPagePinch"/>
                 </Image.GestureRecognizers>
             </Image>
         </Grid>

@@ -16,7 +16,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="ImagePage.xaml">
+    <Compile Update="ImageTripleTapPage.xaml.cs">
+      <DependentUpon>ImageTripleTapPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ImageTripleTapPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ImageSwipePage.xaml">

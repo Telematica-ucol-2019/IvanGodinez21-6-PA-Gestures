@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Gestures
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ImageSwipePage : ContentPage
+    public partial class ImageTripleTapPage : ContentPage
     {
-        public ImageSwipePage(object sender)
+        public ImageTripleTapPage(object sender)
         {
             InitializeComponent();
             var image = (ImageButton)sender;
@@ -22,9 +22,9 @@ namespace Gestures
         private double currentScale;
         private double xOffset;
         private double yOffset;
-        private void OnPageSwipe(object sender, EventArgs args)
+        private void OnTripleTap(object sender, EventArgs args)
         {
-            Console.WriteLine("Swipe");
+            Console.WriteLine("Triple Tap");
             this.Navigation.PopModalAsync();
         }
         private void OnPagePinch(object sender, PinchGestureUpdatedEventArgs args)

@@ -14,15 +14,15 @@ namespace Gestures
         {
             InitializeComponent();
         }
-        private async void OnImageButtonClicked(object sender, EventArgs args)
-        {
-            var imageButton = (ImageButton)sender;
-            await this.Navigation.PushModalAsync(new ImagePage(imageButton));
-        }
-        private async void OnImageButtonClickedAlternative(object sender, EventArgs args)
+        private async void OnImageButtonClickedTypeSwipe(object sender, EventArgs args)
         {
             var imageButton = (ImageButton)sender;
             await this.Navigation.PushModalAsync(new ImageSwipePage(imageButton));
+        }
+        private async void OnImageButtonClickedTypeTripleTap(object sender, EventArgs args)
+        {
+            var imageButton = (ImageButton)sender;
+            await this.Navigation.PushModalAsync(new ImageTripleTapPage(imageButton));
         }
     }
 }
